@@ -1,39 +1,65 @@
-target/
+# -----------------------------------------------------------------
+# CÉL: Java/Maven projektfájlok ignorálása
+# -----------------------------------------------------------------
+
+### 1. Build kimenetek (Maven) ###
+# A Maven által fordított kimeneteket tartalmazó mappa
+/target/
+
+# Wrapper fájlok, ha használsz Maven Wappert
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-.kotlin
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
+# Log fájlok és cache
+*.log
+*.jar.original
+*.war.original
+*.ear.original
+hs_err_pid*
+/bin/
+
+# -----------------------------------------------------------------
+
+### 2. IntelliJ IDEA - IDE Fájlok (Kötelező Ignorálni) ###
+
+# A teljes IntelliJ konfigurációs mappa
+.idea/
+
+# IntelliJ modul fájlok (mindig ignorálandó)
 *.iml
+*.iws
 *.ipr
+.vscode/
+# -----------------------------------------------------------------
 
-### Eclipse ###
-.apt_generated
+### 3. Egyéb IDE-k és Build rendszerek ###
+
+# Eclipse
 .classpath
-.factorypath
 .project
-.settings
-.springBeans
-.sts4-cache
+.settings/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+/build/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
+# Gradle (ha esetleg használsz)
+.gradle/
+/build/
+
+# -----------------------------------------------------------------
+
+### 4. Operációs rendszer és Általános fájlok ###
+
+# Mac OS
 .DS_Store
+
+# Windows
+Thumbs.db
+
+# -----------------------------------------------------------------
